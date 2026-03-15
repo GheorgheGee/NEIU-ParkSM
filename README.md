@@ -1,4 +1,11 @@
-NEIU Parking Management System
+## Documentation
+
+📄 Full explanation of the architecture and implementation:
+➡️ [ (PDF)](docs/project_report.pdf)
+
+
+
+                                                     NEIU Parking Management System
 
 
 Vision and Scope
