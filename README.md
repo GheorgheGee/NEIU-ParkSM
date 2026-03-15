@@ -1,8 +1,17 @@
+<p align="center">
+  <!-- TECHNOLOGY BADGES -->
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/Lombok-FE0000?style=flat&logo=java" alt="Lombok">
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=flat&logo=apache-maven&logoColor=white" alt="Maven">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL">
+</p>
+
 <h1 align="center">NEIU Parking Management System</h1>
 
 <p align="center">
   A centralized, reliable platform for managing parking data at Northeastern Illinois University.<br>
-  Console-based Java application with MySQL backend.
+  Console-based Java application with JDBC and a MySQL backend, containerized with Docker.
 </p>
 
 <hr>
@@ -20,7 +29,9 @@
 <hr>
 
 <h2>Technologies Used</h2>
-<p>Java | MySQL | JDBC | Structured database schema | SQL Views</p>
+<p>
+  <strong>Java</strong> • <strong>Lombok</strong> • <strong>Maven</strong> • <strong>Docker</strong> • <strong>MySQL</strong> • <strong>JDBC</strong> • SQL Views
+</p>
 
 <hr>
 
@@ -32,7 +43,10 @@
 <hr>
 
 <h2>Vision & Scope</h2>
-<p>The system provides NEIU with secure, organized parking infrastructure while reducing admin workload and errors. Future enhancements may include web/mobile interfaces, real-time tracking, automated enforcement, and analytics dashboards.</p>
+<p>
+  The system provides NEIU with a secure, organized parking infrastructure while reducing admin workload and errors.
+  Future enhancements may include web/mobile interfaces, real-time tracking, automated enforcement, and analytics dashboards.
+</p>
 
 <hr>
 
@@ -59,7 +73,7 @@
   <li>Invalid menu option → shows “Invalid choice”</li>
   <li>No records found → shows “No record found!”</li>
   <li>Invalid input format → prompts user again</li>
-  <li>Database errors / foreign key or duplicate key violations handled gracefully</li>
+  <li>Database errors / foreign key or duplicate key violation handled gracefully</li>
 </ul>
 
 <hr>
@@ -85,7 +99,7 @@
 <ul>
   <li>Web or mobile front-end</li>
   <li>Real-time parking availability</li>
-  <li>Digital permit assignment</li>
+  <li>Digital permit assignment integrated with accounts</li>
   <li>Reporting dashboards and analytics</li>
   <li>Integration with security/access-control</li>
   <li>Automated violation detection and alerts</li>
