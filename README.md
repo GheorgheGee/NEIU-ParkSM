@@ -1,202 +1,97 @@
-## Documentation
+<h1 align="center">NEIU Parking Management System</h1>
 
-Full explanation of the architecture and implementation:
-[NEIUParkingManagementSystem (PDF)](/.idea/NEIUParkingManagementSystem.pdf)
+<p align="center">
+  A centralized, reliable platform for managing parking data at Northeastern Illinois University.<br>
+  Console-based Java application with MySQL backend.
+</p>
 
+<hr>
 
+<h2>Features</h2>
+<ul>
+  <li><strong>Student & Employee Management:</strong> Add, view, update, delete records</li>
+  <li><strong>Vehicle Management:</strong> Register, update, remove vehicles linked to students/employees</li>
+  <li><strong>Permit Management:</strong> Define permit types, issue permits, track validity</li>
+  <li><strong>Parking Lot & Space Management:</strong> Define lots, assign spaces, manage availability</li>
+  <li><strong>Parking Event Tracking:</strong> Record entries/exits, associate with permits/lots</li>
+  <li><strong>Data Views & Reporting:</strong> Display tables for students, employees, vehicles, and permits</li>
+</ul>
 
-                                                     NEIU Parking Management System
+<hr>
 
+<h2>Technologies Used</h2>
+<p>Java | MySQL | JDBC | Structured database schema | SQL Views</p>
 
-Vision and Scope
+<hr>
 
-1. Vision
+<h2>Screenshots / Documentation</h2>
+<p>
+  📄 Full documentation: <a href="./.idea/NEIUParkingManagementSystem.pdf">NEIUParkingManagementSystem.pdf</a>
+</p>
 
-The NEIU Parking Management System provides a centralized, reliable, and efficient platform for handling
-parking data at Northeastern Illinois University. It simplifies the registration process for students, staff,
-vehicles, parking permits, lots, and events, replacing manual records with a digital system that enhances
-operational efficiency, data accuracy, traceability, and reporting. Overall, the system supports NEIU’s goal of
-maintaining a secure, organized, and accessible parking infrastructure on campus, while also reducing
-administrative workload, lowering errors, and improving decision-making.
+<hr>
 
-2. Business Objectives
+<h2>Vision & Scope</h2>
+<p>The system provides NEIU with secure, organized parking infrastructure while reducing admin workload and errors. Future enhancements may include web/mobile interfaces, real-time tracking, automated enforcement, and analytics dashboards.</p>
 
-• Keep accurate and current records of students, employees, vehicles, and permits.
-• Make issuing and managing parking permits easier.
-• Offer insights into parking usage through event tracking.
-• Aid enforcement, compliance, and resource planning.
-• Cut down on manual data entry, paper forms, and repetitive admin tasks.
-• Build a foundation for future upgrades like online access, automated enforcement, and analytics.
+<hr>
 
-3. Scope
-   
-3.1 In-Scope Functionality
-   
-The application will provide functionality for:
-A. Student and Employee Management
-• Add, view, update, and delete student records.
-• Add, view, update, and delete employee records.
-B. Vehicle Management
-• Register vehicles linked to students or employees.
-• Associate vehicles with zero or one student, or zero or one employee.
-• Remove or update existing vehicles.
-• Enforce referential integrity.
-C. Permit Management
-• Define permit types (e.g., Gold, Blue, Yellow).
-• Issue parking permits with valid dates.
-• Associate permits with vehicles.
-• Track multiple permits per vehicle over time.
-D. Parking Lot & Space Management
-• Define parking lots and assign unique spaces.
-• Manage space identification and availability (structural, not real-time).
-E. Parking Event Tracking
-• Record vehicle entries and exits.
-• Associate events to lots and permits.
-F. Data Views and Reporting
-• Display student-vehicle table.
-• Display employee-vehicle table.
-• Display permit-vehicle status and validity.
+<h2>Use Case Summary</h2>
+<ul>
+  <li><strong>Trigger:</strong> Admin starts the application</li>
+  <li><strong>Preconditions:</strong> System running, database connected, students/employees exist</li>
+  <li><strong>Postconditions:</strong> Data stored and available for queries/CRUD operations</li>
+</ul>
 
-3.2 Out-of-Scope Functionality
+<p><strong>Normal Flow:</strong></p>
+<ol>
+  <li>Main Menu displayed: Manage Student, Employee, Vehicles, Permits, Parking Lots/Spaces, Parking Events</li>
+  <li>User selects entity to manage</li>
+  <li>Sub-menu: Add / View / Update / Delete / Return</li>
+  <li>User enters data; system validates input</li>
+  <li>Database operation performed (INSERT/SELECT/UPDATE/DELETE)</li>
+  <li>Data displayed in formatted table</li>
+  <li>Repeat operations or exit application</li>
+</ol>
 
-The current version does not include:
+<p><strong>Alternative Flows / Exceptions:</strong></p>
+<ul>
+  <li>Invalid menu option → shows “Invalid choice”</li>
+  <li>No records found → shows “No record found!”</li>
+  <li>Invalid input format → prompts user again</li>
+  <li>Database errors / foreign key or duplicate key violations handled gracefully</li>
+</ul>
 
-• Real-time sensor-based parking availability.
-• Visualization dashboards or analytics.
-• Automated citation or enforcement workflows.
-• Mobile or web interface.
-• User authentication or role-based access control.
-• Payment processing.
-• Integration with university systems.
-These may be addressed in future releases.
+<hr>
 
+<h2>Constraints & Assumptions</h2>
+<p><strong>Constraints:</strong> Active MySQL required; text-based menu; data must follow relationships</p>
+<p><strong>Assumptions:</strong> Users have basic technical skills; database updated regularly; system scalable</p>
 
-4. Stakeholders
+<hr>
 
-• Primary Users: NEIU Parking Officer / Admin
-• Indirect Beneficiaries: Students and employees (due to better service)
+<h2>Success Criteria</h2>
+<ul>
+  <li>Accurate storage and retrieval of parking data</li>
+  <li>Referential integrity maintained</li>
+  <li>Reduced manual effort for management</li>
+  <li>Clear, readable output</li>
+  <li>Supports future enhancements without redesign</li>
+</ul>
 
-5. Proposed System Environment
+<hr>
 
-• Java console application
-• MySQL relational database
-• JDBC for connectivity
-• Structured database schema with referential integrity
-• SQL views for consolidated data representation
+<h2>Future Vision</h2>
+<ul>
+  <li>Web or mobile front-end</li>
+  <li>Real-time parking availability</li>
+  <li>Digital permit assignment</li>
+  <li>Reporting dashboards and analytics</li>
+  <li>Integration with security/access-control</li>
+  <li>Automated violation detection and alerts</li>
+</ul>
 
-6. Constraints and Assumptions
-   
-Constraints:
+<hr>
 
-• System depends on an active MySQL instance.
-• Data must conform to defined relationships and constraints.
-• Users interact through a text-based menu system.
-Assumptions:
-• Users have basic technical literacy.
-• Parking data is updated regularly and accurately.
-• Database will grow over time and require maintenance.
-
-7. Success Criteria
-
-The project will be considered successful if it:
-• Accurately stores and retrieves parking-related data.
-• Maintains referential integrity and prevents inconsistent entries.
-• Reduces time and effort required to manage parking records.
-• Provides clear, readable output to end-users.
-• Supports future enhancements without redesigning the core database.
-
-8. Future Vision
-
-The application is intended as a scalable foundation for future innovation, including:
-• A web or mobile front-end
-• Real-time parking availability tracking
-• Digital permit assignment integrated with student/employee accounts
-• Reporting dashboards and analytics
-• Integration with security and access-control systems
-• Automated violation detection and alerts
-These developments would transform the NEIU Parking Management System from a record-keeping system
-into a comprehensive smart-campus parking management platform.
-
-Description: This use case describes how a user interacts with the NEIU Parking Lot Database Management System to manage parkingrelated
-information. Using a console-based menu, the user can add, view, update, and delete records for students,
-employees, vehicles, parking permits, parking lots, parking spaces, and parking events. The system validates input, enforces
-database constraints, and provides feedback after each operation.
-
-Trigger: The admin starts the application and reaches the Main Menu.
-
-Preconditions: The system is running and connected to the database. Student or Employee must exist 
-in the system if the vehicle will be
-associated with that person. Also, if a student/employee is not yet in DB, they can be added via the application.
-
-Postconditions: A new vehicle is stored in the DB. The data is available for future queries, permit assignments, and CRUD operations.
-Normal Flow: 1. User starts the Parking Management System application.
-
-2. System displays the Main Menu with options, such as:
-Manage Student
-Manage Employee
-Manage Vehicles
-Manage Permits/Permit Types
-Manage Parking Lots/Spaces
-Manage Parking Events
-
-3. User selects one of the managements options.
-
-4. System displays a sub menu for the chosen entity, such as:
-Add(Create)
-View(Read)
-Update
-Delete
-Return to previous Menu
-
-5. User Selects an operation.
-
-6. System prompts the user for the required input.
-
-7. User enters the requested data.
-
-8. System validates the input.
-
-9. System performs the requested database operation via JDBC.
-Executes SQL INSERT/SELECT/UPDATE/DELETE
-
-10. System processes the result and displays the data via a formatted table.
-Upon failure, the system will display the error message to the user.
-
-11. System returns the user to the relevant sub menu or main menu.
-
-12. User may repeat steps 3-11 for additional operations.
-
-13. When done, user can EXIT the application from the Main Menu.
-
-14. System terminates the application.
-
-Alternative Flows: 1. Invalid Menu Option
-User inputs a number that doesn’t match to the corresponding menu option
-System displays “Invalid choice”
-
-2. No records found
-User chooses to view a record that doesn’t exist.
-System displays a message such as “ No record found!” and returns to the menu.
-
-Exceptions: 1. Invalid input format.
-User enters invalid data.
-System displays error and re-prompts for correct input.
-
-2. Database connection error
-System cannot insert data due to SQL error.
-System informs users of system error and returns back to main menu.
-
-3. Foreign Key Violation
-
-4. Duplicate Primary Key
-Priority: High. Essential System Functionality.
-Frequency: Frequent. Expected multiple times per day by the admin or parking office.
-Business Rules: License plate must be unique.
-Owner can be either a current student or NEIU employee, even though, they can be added before adding a vehicle.
-Certain deletes may be restricted or cascade.
-Data must be kept consistent with defined foreign keys and ON DELETE rules (CASCADE / SET NULL)
-Other Information: This use case is part of the core CRUD process for the Parking Management System.
-Assumptions: User has basic computer skills.
-User understands NEIU parking business concepts.
-Database contains valid student and employee data.
-System validates data before insertion.
+<h2>Author</h2>
+<p>GheorgheGee</p>
