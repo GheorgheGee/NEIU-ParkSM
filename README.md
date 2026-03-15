@@ -1,7 +1,7 @@
 ## Documentation
 
 📄 Full explanation of the architecture and implementation:
-➡️ [ (PDF)](docs/project_report.pdf)
+➡️ [NEIUParkingManagementSystem (PDF)](/.idea/NEIUParkingManagementSystem.pdf)
 
 
 
