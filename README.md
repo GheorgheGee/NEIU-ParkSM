@@ -108,4 +108,4 @@
 <hr>
 
 <h2>Author</h2>
-<p>GheorgheGee</p>
+<p>GheorgheG</p>
